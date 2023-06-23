@@ -10,11 +10,14 @@ return [
     |
     */
 
+    'auth_table' => env('AUTH_TABLE_NAME', 'admins'),
+
     'user' => [
         'add_default_role_on_register' => true,
-        'default_role'                 => 'user',
-        'default_avatar'               => 'users/default.png',
+        'default_role'                 => 'admin',
+        'default_avatar'               => 'admins/default.png',
         'redirect'                     => '/admin',
+        'namespace'                    => App\Models\Admin::class,
     ],
 
     /*
